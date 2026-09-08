@@ -10,39 +10,41 @@
 // they value should not be greater or less than the value given by y = mx + c
 // 0 <= x <= 10
 // 0 <= y <= mx + c
+#include <iostream>
 
-import std;
+//import std;
 
 int main() // read name and age
 {
     std::cout << "Please enter a coordinate pair value: \n";
 
     // Initialize coordinate values
-    int x1 = 0;
-    int y1 = 0;
+    double x1 = 0;
+    double y1 = 0;
+
+// Read values first before using them in calculations
+    std::cin >> x1 >> y1;
 
     double gradient = 0;
-    int x_max = 100;
-    int y_max = 200;
-    int x_min = 0;
-    int y_min = 0;
+    double x_max = 100;
+    double y_max = 200;
+    double x_min = 0;
+    double y_min = 0;
 
     // Compute gradient
-    gradient = (x_max - x_min) / (y_max - y_min);
+    gradient = (y_max - y_min) / (x_max - x_min);
 
     // y = mx + c
     double y_intercept = y_max - (gradient * x_min);
     double y_extrapolate = (gradient * x1) + y_intercept;
 
-    // Read values
-    std::cin >> x1 >> y1;
 
     if ((x_min <= x1 && x1 <= x_max) &&
         // (y_min <= y1 && y1 <= y_max) &&
         (y_min <= y1 && y1 <= y_extrapolate))
-        std::print("Point ({},{}) lies in triangle\n", x1, y1);
+        std::cout<<"Point (" << x1 << ", " << y1 << ") lies in triangle\n";
     else
-        std::print("It does not lie in the triangle\n");
+        std::cout<<"It does not lie in the triangle\n";
 
     return 0;
 }
