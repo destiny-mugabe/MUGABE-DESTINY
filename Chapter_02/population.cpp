@@ -14,6 +14,7 @@ int main() {
     int seconds_per_year = 365 * 24 * 60 * 60;
     
     // Calculate annual changes
+    
     int births = seconds_per_year / 7;
     int deaths = seconds_per_year / 13;
     int immigrants = seconds_per_year / 45;

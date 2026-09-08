@@ -19,6 +19,7 @@ int main() // read name and age
     std::cout << "Please enter a coordinate pair value: \n";
 
     // Initialize coordinate values
+    
     double x1 = 0;
     double y1 = 0;
 

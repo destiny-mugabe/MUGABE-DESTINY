@@ -39,6 +39,7 @@ int main() {
     string pointNames[100];
     double pointX[100];
     double pointY[100];
+    
 
     for (int i = 0; i < numPoints; i++) {
         cout << "\nEnter Point " << (i + 1) << " Name: ";
